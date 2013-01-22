@@ -436,10 +436,16 @@ $form5 =<<<eoq5
  </div>
 
 eoq5;
+ 
+ 
+ 
 
 	$uwMain = $final.$form5;
 
-	//set the upgrade progress status.
+	
+
+
+//set the upgrade progress status.
 	set_upgrade_progress('preflight','done');
 }
 else{

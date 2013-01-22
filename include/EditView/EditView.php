@@ -59,7 +59,7 @@ class EditView {
     /**
      *
      * @param string $module module to use
-     * @param string $template template of the form to retreive
+     * @param string $template template of the form to retrieve
      */
     function EditView($module, $template) {
         $this->module = $module;

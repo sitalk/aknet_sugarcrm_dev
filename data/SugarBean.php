@@ -1293,13 +1293,17 @@ class SugarBean
     /**
     * Cleans char, varchar, text, etc. fields of XSS type materials
     */
+
+
     function cleanBean() {
         foreach($this->field_defs as $key => $def) {
 
             if (isset($def['type'])) {
                 $type=$def['type'];
             }
-            if(isset($def['dbType']))
+             
+ 
+if(isset($def['dbType']))
                 $type .= $def['dbType'];
 
             if($def['type'] == 'html') {
@@ -5599,3 +5603,4 @@ class SugarBean
             && isset($field_def['link']);
     }
 }
+?>

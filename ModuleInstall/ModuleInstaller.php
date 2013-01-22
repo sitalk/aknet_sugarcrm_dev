@@ -79,8 +79,12 @@ class ModuleInstaller{
     *
     * Finally it runs over a list of defined tasks; then install_beans, then install_custom_fields, then clear the Vardefs, run a RepairAndClear, then finally call rebuild_relationships.
     */
+
+
 	function install($base_dir, $is_upgrade = false, $previous_version = ''){
-		if(defined('TEMPLATE_URL'))SugarTemplateUtilities::disableCache();
+		 
+ 
+if(defined('TEMPLATE_URL'))SugarTemplateUtilities::disableCache();
 		if(!empty($GLOBALS['sugar_config']['moduleInstaller']['packageScan'])){
 			$this->ms->scanPackage($base_dir);
 			if($this->ms->hasIssues()){
@@ -195,8 +199,14 @@ class ModuleInstaller{
 				$rac = new RepairAndClear();
 				$rac->repairAndClearAll($selectedActions, $this->installed_modules,true, false);
 				$this->rebuild_relationships();
+
+
+
 				UpdateSystemTabs('Add',$this->tab_modules);
-                //Clear out all the langauge cache files.
+                 
+
+ 
+//Clear out all the langauge cache files.
                 clearAllJsAndJsLangFilesWithoutOutput();
                 $cache_key = 'app_list_strings.'.$GLOBALS['current_language'];
                 sugar_cache_clear($cache_key );
@@ -1545,9 +1555,13 @@ class ModuleInstaller{
 					echo '</div>';
 				}
 
+
+
 				UpdateSystemTabs('Restore',$installed_modules);
 
-	            //clear the unified_search_module.php file
+	             
+ 
+//clear the unified_search_module.php file
 	            require_once('modules/Home/UnifiedSearchAdvanced.php');
 	            UnifiedSearchAdvanced::unlinkUnifiedSearchModulesFile();
 
@@ -2394,3 +2408,4 @@ private function dir_file_count($path){
     }
 
 }
+?>

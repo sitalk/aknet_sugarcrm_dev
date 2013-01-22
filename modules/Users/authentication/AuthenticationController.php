@@ -144,8 +144,10 @@ class AuthenticationController
 				$checkTimeZone = false;
 			} // if
 			if(empty($ut) && $checkTimeZone && $_REQUEST['action'] != 'SetTimezone' && $_REQUEST['action'] != 'SaveTimezone' ) {
+ 
 				$GLOBALS['module'] = 'Users';
-				$GLOBALS['action'] = 'Wizard';
+				
+$GLOBALS['action'] = 'Wizard';
 				ob_clean();
 				header("Location: index.php?module=Users&action=Wizard");
 				sugar_cleanup(true);
@@ -196,3 +198,4 @@ class AuthenticationController
 		$GLOBALS['logic_hook']->call_custom_logic('Users', 'after_logout');
 	}
 }
+?>

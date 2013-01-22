@@ -117,9 +117,19 @@ class SugarView
         $this->_checkModule();
 
         //trackView has to be here in order to track for breadcrumbs
+
+      
+
+ 
+ 
+ 
         $this->_trackView();
 
-        //For the ajaxUI, we need to use output buffering to return the page in an ajax friendly format
+        
+
+
+
+//For the ajaxUI, we need to use output buffering to return the page in an ajax friendly format
         if ($this->_getOption('json_output')){
 			ob_start();
 			if(!empty($_REQUEST['ajax_load']) && !empty($_REQUEST['loadLanguageJS'])) {
@@ -660,9 +670,17 @@ class SugarView
         } else {
             $ss->display($headerTpl);
 
+ 
+ 
+ 
+
             $this->includeClassicFile('modules/Administration/DisplayWarnings.php');
 
-            $errorMessages = SugarApplication::getErrorMessages();
+            
+
+
+
+$errorMessages = SugarApplication::getErrorMessages();
             if ( !empty($errorMessages)) {
                 foreach ( $errorMessages as $error_message ) {
                     echo('<p class="error">' . $error_message.'</p>');
@@ -770,8 +788,16 @@ EOQ;
         global $locale, $sugar_config, $timedate;
 
 
+
+
+
+
         if ($this->_getOption('show_javascript')) {
-            if (!$this->_getOption('show_header')) {
+             
+ 
+ 
+
+if (!$this->_getOption('show_header')) {
                 $langHeader = get_language_header();
 
                 echo <<<EOHTML
@@ -1653,3 +1679,4 @@ EOHTML;
 
 
 }
+?>

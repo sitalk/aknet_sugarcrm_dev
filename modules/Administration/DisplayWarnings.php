@@ -152,7 +152,9 @@ if($smtp_error) {
 			displayAdminError($_SESSION['administrator_error']);
 		}
 
+
+
+
 		unset($_SESSION['administrator_error']);
 }
-
 ?>
