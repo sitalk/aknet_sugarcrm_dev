@@ -5,7 +5,6 @@
 
 <input id="{{sugarvar key='name'}}-input" value='{sugar_dictionary table={{$vardef.ext1}} idField={{$vardef.ext2}} nameField={{$vardef.ext3}} value={{sugarvar key=value string=true}} }' data-name="{{sugarvar key='name'}}"/>
         
-<span>{{$vardef.module_name_input}}</span>        
 {sugar_getscript file="cache/include/javascript/sugar_grp_quickcomp.js"}
 {sugar_getscript file="custom/include/jquery/ui/jquery-ui.js"}
 <script language='javascript'>

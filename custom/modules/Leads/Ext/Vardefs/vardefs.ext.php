@@ -79,7 +79,8 @@ $dictionary["Lead"]["fields"]["aknet_servicetv_leads"] = array (
 );
 
 
- // created: 2013-01-14 09:29:58
+ // created: 2013-01-15 11:24:07
+$dictionary['Lead']['fields']['address_house_c']['module_name_input']='Aknet_House';
 
  
 
